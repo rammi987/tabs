@@ -1,12 +1,12 @@
 'use strict';
 
-const gulp = require('gulp');
-const plumber = require('gulp-plumber');
-const watch = require('gulp-watch');
-const jspm            = require('gulp-jspm');
-const babel = require('babel-loader');
-const util = require('gulp-util');
-const sass            = require('gulp-sass');
+const gulp		 	= require('gulp');
+const plumber 		= require('gulp-plumber');
+const watch 		= require('gulp-watch');
+const uglify		= require('gulp-uglify');
+const rename		= require('gulp-rename');
+const util 			= require('gulp-util');
+const sass    		= require('gulp-sass');
 
 gulp.task('watch', () => {
     watch(['./lib/Scripts/**/*.js'], () => {
@@ -21,9 +21,10 @@ gulp.task('watch', () => {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src(['./lib/Scripts/index.js', '!**/jspm_packages/**'])
+    return gulp.src(['./lib/Scripts/index.js'])
         .pipe(plumber())
-        .pipe(babel())
+		.pipe(uglify())
+		.pipe(rename('index.bundle.js'))
         .pipe(gulp.dest('./src/Scripts/'))
         .on('error', util.log);
 });
