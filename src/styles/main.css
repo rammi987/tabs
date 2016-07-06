@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+li {
+  margin: 0;
+  padding: 0; }
+
+.tab-container {
+  max-width: 100%;
+  overflow: hidden; }
+  .tab-container__item {
+    float: left; }
+    .tab-container__item.active {
+      color: red; }
+
+.tab-content__item {
+  float: left; }
+
+/* test */
+section {
+  width: 1200px;
+  margin: 0 auto; }

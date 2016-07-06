@@ -1,0 +1,18 @@
+.tab-container {
+    max-width: 100%;
+    overflow: hidden;
+
+    &__item {
+        float: left;
+
+        &.active {
+        	color: red;
+        }
+    }
+}
+
+.tab-content {
+	&__item {
+		float:left;
+	}
+}
