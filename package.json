@@ -1,6 +1,6 @@
 {
   "name": "tabs",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "tabs with ",
   "main": "src/scripts/index.bundle.js",
   "scripts": {
